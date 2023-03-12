@@ -1,0 +1,160 @@
+@charset "UTF-8";
+
+/*** 共通 ***/
+body {
+	margin:0 12.5%;
+}
+.mb100 {
+	margin-bottom: 100px;
+}
+.center {
+	text-align: center;
+}
+.large {
+	font-size: 2rem;
+}
+.middle {
+	font-size: 1.5rem;
+}
+.small {
+	font-size: 1rem;
+}
+/*** タイトルページ ***/
+h2.title {
+	width: 100%;
+	line-height: 50px;
+	background-color: skyblue;
+	color: white;
+	border-radius: 5px;
+	text-align: center;
+}
+#quizList{
+	padding: 0;
+}
+.quizList{
+	width: 33%;
+	float: left;
+	list-style-type: none;
+	cursor: pointer;
+}
+.quizContent{
+	height: 100px;
+	line-height: 50px;
+	font-size: 1.3rem;
+	border: 1.5px solid #c0c0c0;
+	margin: 5px 10px;
+	text-align: center;	
+}
+.quizContent:hover{
+	background-color: #c0c0c0;
+	color: white;
+}
+.quizContent:hover .quizDescription{
+	color: white;
+}
+.quizDescription{
+	height: 2rem;
+	overflow: hidden;
+	margin: 10px;
+	margin-top: 0;
+	text-align: left;
+	line-height: 1rem;
+	color: #c0c0c0;
+}
+
+/*** クイズページ ***/
+#quizTitle, .quiz {
+	height: 100vh;
+	width: 75%;
+	background-color: white;
+	position: absolute;
+}
+.wrap {
+	margin: 0 10%;
+	height: 60vh;
+}
+/* ボタン系 */
+.botton {
+	width: 200px;
+	height: 50px;
+	font-size: 2rem;
+	cursor: pointer;
+	border: none;
+	border-radius: 5px;
+}
+.blue {
+	background-color: skyblue;
+	color: white;
+}
+.blue:hover{
+	background-color: #4169e1;
+}
+.gray {
+	background-color: white;
+	color: #c0c0c0;
+	border: solid 2px #c0c0c0;
+}
+.gray:hover{
+	background-color: #c0c0c0;
+	color: white;
+}
+.prev, .next, .toTitle, .retry {
+	margin: 0 5px;
+}
+.toTitle {
+	width: auto;
+}
+ol.answerList {
+	list-style-type: none;
+	counter-reset: count 0;
+	padding-inline-start: 0;
+}
+li.answer::before {
+	content: counter(count)". ";
+	counter-increment: count 1;
+}
+.answer {
+	cursor: pointer;
+	padding: 0 10px;
+	border-radius: 5px;
+}
+.answer:hover {
+	font-weight: bold;
+}
+.collect {
+    margin: 0;
+    background-color: white;
+    border-radius: 0 0 7px 7px;
+    font-size: 2rem;
+}
+.collectTitle {
+	font-size: large;
+    width: 100px;
+    text-align: center;
+    background-color: #deb887;
+    border: solid 1px #deb887;
+    color: white;
+    border-radius: 7px;
+}
+.batu::before {
+	content: '×';
+	color: #1e90ff;
+}
+.maru::before {
+	content: '〇';
+	color: #ff6347;
+}
+/*** 結果ページ ***/
+#recommend {
+	width: 150px;
+	border: solid 2px #c0c0c0;
+	border-radius: 5px;
+	color: #c0c0c0;
+	display: inline-block;
+}
+#recommend:hover {
+	cursor: pointer;
+}
+#recommend span {
+	color: #c0c0c0;
+}
